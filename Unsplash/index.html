@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <style>
+        /* body{
+            display: flex;
+            flex-wrap: wrap;
+            background-color: beige;
+        }
+         */
+        img{
+            display: flex;
+            flex: 1 200px;
+            height: 400px;
+            width: 400px;
+            margin: 10px;
+        }
+
+        #list{
+            display: flex;
+            gap: 10;
+            flex-wrap: wrap;
+        }
+
+        h1{
+            text-align: center;
+        }
+        #form{
+            display: flex;
+            justify-content: center;;
+        }
+    </style>
+    <title>Unsplash Web</title>
+</head>
+<body class="appearance-none">
+    <h1 class="text-center">Unsplash</h1>
+
+    <div action="" id="form" class="flex ml-10   place-content-center">
+        <div>
+
+            <input  id="input" class="border-2 appearance-none"/>
+            <button id="button" class="bg-lime-600 bg-green-950">ok</button>
+        </div>
+        <div style="display: flex;  align-items:flex-end;">
+
+            <button id="landscope">Landscope</button>
+            <button id="portrait">Portrait</button>
+        </div>
+
+    </div>
+    <div id="list" >
+        <!-- <img class="img" src="WIN_20240425_19_31_47_Pro.jpg" alt="">
+        <img class="img" src="WIN_20240425_19_31_47_Pro.jpg" alt="">
+        <img class="img" src="WIN_20240425_19_31_47_Pro.jpg" alt="">
+        <img class="img" src="WIN_20240425_19_31_47_Pro.jpg" alt="">
+        <img class="img" src="WIN_20240425_19_31_47_Pro.jpg" alt="">
+        <img class="img" src="WIN_20240425_19_31_47_Pro.jpg" alt=""> -->
+    </div>
+
+    <div style="  padding: 2px;   align-items: center; align-content: center; text-align: center;">
+        
+        
+        <button id="showMore" style=" background-color: green; visibility: hidden;">
+            Show More
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
