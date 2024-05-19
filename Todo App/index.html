@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+
+
+  <div class="flex justify-center mt-32 ">
+
+    <div class="shadow-xl hero w-3/4   ">
+      <div class="flex flex-col">
+
+        <div class="hero-content text-center">
+          <div>
+
+            <h1 class="text-7xl font-bold">Task Manager</h1>
+            <p class="text-xl text-zinc-500 m-4 ">This project tasked by Arfat bhai from Industrial Mentorship</p>
+            <div class="flex">
+              <input id="input" type="text" placeholder="Add a new task"
+                class="bg-gray-100 m-3 input input-bordered w-full max-w-xl" />
+              <button id="btn" class="m-3 ml-0 btn btn-neutral p-2">Add Task</button>
+            </div>
+
+
+            <div id="errorBox" class="hidden text-xl text-red-400 font-serif">
+              test here a,skdjsjadljas; adfjl; 
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="flex gap-8 my-9 ">
+
+          <!-- first -->
+          <div>
+
+            <div class="card card-compact w-96 h-full bg-base-100 shadow-xl   " id="">
+              <div class="bg-blue-100 font-bold text-xl h-16    rounded-lg">
+
+                <div class="text-start mt-4 ml-2">
+
+                  To Do
+                </div>
+
+              </div>
+
+              <div class="toDoSection" id="cleanTodo">
+
+
+              </div>
+
+
+
+
+
+
+              <div>
+
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+          </div>
+
+
+
+          <!-- second -->
+          <div>
+
+
+            <div class="card card-compact w-96   bg-base-100 shadow-2xl  ">
+              <div class="bg-purple-200 font-bold text-xl h-16 rounded-lg mb-5 ">
+
+                <div class="text-start mt-4 ml-2 mb-8">
+
+                  In Prograss
+                </div>
+              </div>
+
+
+
+              <div id="cleanInProgress" class="inProgressSection flex flex-col gap-2">
+
+
+
+              </div>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+          </div>
+
+
+
+
+          <!-- third -->
+          <div></div>
+          <div class="card card-compact w-96  bg-base-100 shadow-xl   " id="completeSection">
+            <div class="bg-green-200 font-bold text-xl h-16    rounded-lg">
+
+              <div class="text-start mt-4 ml-2 mb-8">
+
+                Completed
+              </div>
+            </div>
+
+
+
+            <div class="completeSection" id="cleanCompleted">
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
