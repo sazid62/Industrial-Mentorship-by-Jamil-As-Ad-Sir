@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meme Favorites App</title>
+</head>
+<body>
+  <div class="flex flex-col h-screen">
+    <!-- Header Section -->
+    <header class="flex justify-between p-4 h-20">
+      <!-- App Title -->
+      <div>
+        <h1 class="font-mono ml-2 text-2xl h-10">My Favourite Memes</h1>
+      </div>
+
+      <!-- Search Input -->
+      <div>
+        <input id="searchMemes" class="p-3" type="text" placeholder="Search memes...">
+      </div>
+
+      <!-- Theme Dropdown and User Actions -->
+      <div class="flex">
+        <button id="demo" class="btn btn-primary m-1 hidden">You're in Demo Mode</button>
+        <button id="signOut" class="btn btn-primary m-1 hidden">Sign Out</button>
+        <button id="logIn" class="btn btn-primary m-1">Log In</button>
+
+        <!-- Theme Dropdown -->
+        <div class="w-max h-max z-10">
+          <div class="dropdown mb-72">
+            <div tabindex="0" role="button" class="btn btn-primary m-1 overflow-hidden">
+              Theme
+              <svg width="12px" height="12px" class="inline-block h-2 w-2 fill-current opacity-60"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
+                <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+              </svg>
+            </div>
+            <!-- Theme options container -->
+            <div class="dropdown-content bg-base-300 rounded-box w-52 p-2 shadow-2xl overflow-x-hidden">
+              <!-- Scrollable theme options -->
+              <div class="max-h-60 overflow-y-auto">
+                <ul id="listOfTheme" class="space-y-2">
+                  <!-- Theme options will be dynamically inserted here -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <hr class="w-full h-0.5 bg-slate-500">
+
+    <!-- Main Content Section -->
+    <main class="flex flex-1 overflow-hidden">
+      <!-- Favorite Memes Sidebar -->
+      <aside class="hidden md:block md:w-60 md:max-w-2xl md:h-full md:shadow-2xl md:p-4 md:bg-base-100 md:overflow-y-auto">
+        <table class="w-full" id="favouriteMemesList">
+          <tbody>
+            <!-- Favorite memes will be dynamically inserted here -->
+          </tbody>
+        </table>
+      </aside>
+
+      <!-- Meme Content Area -->
+      <section class="flex-1 p-7 relative">
+        <!-- Loading Spinner -->
+        <div id="loadingSpinner" class="absolute inset-0 flex items-center justify-center bg-base-100 bg-opacity-75 hidden">
+          <div class="text-center">
+            <div class="loading loading-spinner loading-lg"></div>
+            <p class="mt-4 text-lg font-semibold">Loading Memes...</p>
+          </div>
+        </div>
+      
+        <!-- Meme Grid -->
+        <div class="h-full overflow-y-auto" id="needHide">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 p-6" id="showContent">
+            <!-- Meme cards will be dynamically inserted here -->
+          </div>
+        </div>
+      
+        <!-- API Key Dialog -->
+        <div id="dialogueBox" class="absolute inset-0 flex items-center justify-center bg-base-100 bg-opacity-75 hidden">
+          <div class="bg-base-200 p-8 rounded-lg shadow-xl text-center">
+            <h1 class="text-xl font-bold mb-4">You need an API key to get memes feed</h1>
+            <button id="modalBtn" class="btn btn-primary" onclick="my_modal_1.showModal()">SET API KEY</button>
+          </div>
+        </div>
+      
+        <!-- Modal -->
+        <dialog id="my_modal_1" class="modal">
+          <div class="modal-box max-w-md mx-auto">
+            <h3 class="text-lg font-bold mb-4">Set Your API Key</h3>
+            <p class="mb-4 font-semibold">
+              Please set your API key for HUMOR API. Once set, you don't need to set it again.<br>
+              Visit <a class="underline text-blue-700" href="https://humorapi.com/console/#Profile">https://humorapi.com/console/#Profile</a>
+            </p>
+            <input id="apiInput" type="text" class="input input-bordered w-full mb-4" placeholder="Enter API Key">
+            <p id="errorMsg" class="hidden text-red-500 font-semibold mb-4"></p>
+            <button id="apiSubmitBtn" class="btn btn-primary w-full">Save API Key in Browser</button>
+            <div class="modal-action">
+              <form method="dialog">
+                <button class="btn">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
